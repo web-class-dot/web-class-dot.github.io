@@ -125,7 +125,10 @@ body {
   .src-video {
     object-fit: contain;
   }
-  body{
+  .controls{
     font-size: 1.2rem;
+  }
+  .loader-animation{
+    margin: 0 auto;
   }
 }
