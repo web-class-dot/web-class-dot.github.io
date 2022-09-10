@@ -4,55 +4,64 @@
   padding: 0;
   margin: 0;
 }
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: 'Bebas Neue', cursive;
-font-family: 'Kanit', sans-serif;
-font-family: 'Lobster', cursive;
-font-family: 'Nunito', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Patrick Hand', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Rubik', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Lobster', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Patrick Hand', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
-.video-container{
+.video-container {
   width: 35%;
   min-height: 35%;
 }
-.media{
+.media {
   width: 100%;
   height: 100%;
 }
-.src-video{
- width: 100%;
- height: 100%;
- object-fit: cover;
- background-color: black;
+.src-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: black;
 }
-.seek-container{
+.seek-container {
   width: 65%;
   display: flex;
   justify-content: space-between;
 }
-.seek-slider{
+.seek-slider {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   display: block;
   width: 50%;
   height: 12px;
-  background-image: linear-gradient(to right,rgb(84 80 80) 0% 100%,rgba(172, 19, 19, 0.685) 0% 0%);
+  background-image: linear-gradient(
+    to right,
+    rgb(84 80 80) 0% 100%,
+    rgba(172, 19, 19, 0.685) 0% 0%
+  );
   border-radius: 20px;
 }
-.seek-slider::-webkit-slider-thumb{
+.seek-slider::-webkit-slider-thumb,
+.seek-slider::-moz-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
   background-color: rgb(216, 37, 37);
   border-radius: 150px;
 }
-.forward, .play, .pause,.mute {
+.forward,
+.play,
+.pause,
+.mute {
   font-size: 2rem;
   font-weight: bolder;
   width: 30px;
@@ -60,10 +69,10 @@ font-family: 'Rubik', sans-serif;
   text-align: center;
   line-height: 30px;
 }
-.pause{
+.pause {
   font-size: 1.4rem;
 }
-.controls{
+.controls {
   cursor: pointer;
   position: absolute;
   width: inherit;
@@ -75,9 +84,8 @@ font-family: 'Rubik', sans-serif;
   color: white;
   top: 35%;
   bottom: 0;
- 
 }
-.loader-animation{
+.loader-animation {
   width: 50px;
   height: 50px;
   border-left: 2px solid white;
@@ -85,30 +93,31 @@ font-family: 'Rubik', sans-serif;
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
   position: absolute;
-  top:15%;
+  top: 15%;
   left: 12%;
   right: 50%;
   bottom: 50%;
   border-radius: 150px;
-  animation: rotate 1s linear   infinite  ;
+  animation: rotate 1s linear infinite;
   display: none;
 }
-.forward{
+.forward {
   display: block;
   transform: rotate(110deg);
 }
-.backward{
+.backward {
   transform: rotate(-20deg);
 }
-@keyframes rotate{
-  100%{transform: rotate(360deg);}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.fullscreen{
+.fullscreen {
   top: 90%;
 }
-@media screen and (max-width:700px)
-{
-  .video-container{
+@media screen and (max-width: 700px) {
+  .video-container {
     width: 100%;
   }
 }
