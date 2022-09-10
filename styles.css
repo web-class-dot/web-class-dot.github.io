@@ -36,6 +36,8 @@ font-family: 'Rubik', sans-serif;
   justify-content: space-between;
 }
 .seek-slider{
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   display: block;
   width: 50%;
