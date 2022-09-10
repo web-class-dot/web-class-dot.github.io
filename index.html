@@ -3,41 +3,63 @@
   <head>
     <title>Home</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="styles.css" />
-   
   </head>
   <body>
-     <div class="video-container">
-
-     <div class="media">
-       <video src="https://cdn-cf.sharechat.com/08cc3e22-ca0b-49e2-a3c8-8a7405bdef14-059255da-0d52-4f7e-a2d2-a7f7c7e4bd6c_c_v.mp4" class="src-video"></video>
-       <div class="loader-animation"></div>
-     </div>
-     <div class="controls">
-       <div class="seek-container">
-       <span class="currentDuration">00:00:00 </span>  <input type="range"  name="" max="100" min='0' value="0" class="seek-slider"> <span class="totalDuration">00:00:00</span>
-       </div>
-      <div class="forward">&#8635;</div>
-       <div class="play">&#9654;</div>
-       <div class="pause">&#9612;&#9612;</div>
-       <div class="forward backward">&#8635;</div>
-       <div class="mute">🔈</div>
-     </div>
-     <div class="controls mobile-controls">
-     <div class="seek-container">
-     <span class="currentDuration">00:00:00 </span>  <input type="range"  name="" max="100" min='0' value="0" class="seek-slider"> <span class="totalDuration">00:00:00</span>
-     </div>
-     <div class="nested-controls">
-    <div class="forward">&#8635;</div>
-     <div class="play">&#9654;</div>
-     <div class="pause">&#9612;&#9612;</div>
-     <div class="forward backward">&#8635;</div>
-     <div class="mute">🔈</div>
-   </div>
-     </div>
-     </div>
+    <div class="video-container">
+      <div class="media">
+        <video
+          src="https://cdn-cf.sharechat.com/08cc3e22-ca0b-49e2-a3c8-8a7405bdef14-059255da-0d52-4f7e-a2d2-a7f7c7e4bd6c_c_v.mp4"
+          class="src-video"
+        ></video>
+        <div class="loader-animation"></div>
+      </div>
+      <div class="controls">
+        <div class="seek-container">
+          <span class="currentDuration">00:00:00 </span>
+          <input
+            type="range"
+            name=""
+            max="100"
+            min="0"
+            value="0"
+            class="seek-slider"
+          />
+          <span class="totalDuration">00:00:00</span>
+        </div>
+        <div class="forward">&#8635;</div>
+        <div class="play">&#9654;</div>
+        <div class="pause">&#9612;&#9612;</div>
+        <div class="forward backward">&#8635;</div>
+        <div class="mute">🔈</div>
+      </div>
+      <div class="controls mobile-controls">
+        <div class="seek-container">
+          <span class="currentDuration">00:00:00 </span>
+          <input
+            type="range"
+            name=""
+            max="100"
+            min="0"
+            value="0"
+            class="seek-slider"
+          />
+          <span class="totalDuration">00:00:00</span>
+        </div>
+        <div class="nested-controls">
+          <div class="forward">&#8635;</div>
+          <div class="play">&#9654;</div>
+          <div class="pause">&#9612;&#9612;</div>
+          <div class="forward backward">&#8635;</div>
+          <div class="mute">🔈</div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="script.js"></script>
   </body>
 </html>
