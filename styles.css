@@ -50,8 +50,10 @@ body {
   );
   border-radius: 20px;
 }
-.seek-slider[type="range"]::-webkit-slider-thumb,
-.seek-slider[type="range"]::-moz-slider-thumb,.seek-slider::-m {
+.seek-slider[type='range']::-webkit-slider-thumb,
+.seek-slider[type='range']::-moz-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
