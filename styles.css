@@ -50,8 +50,8 @@ body {
   );
   border-radius: 20px;
 }
-.seek-slider::-webkit-slider-thumb,
-.seek-slider::-moz-slider-thumb {
+.seek-slider[type="range"]::-webkit-slider-thumb,
+.seek-slider[type="range"]::-moz-slider-thumb,.seek-slider::-m {
   appearance: none;
   width: 20px;
   height: 20px;
