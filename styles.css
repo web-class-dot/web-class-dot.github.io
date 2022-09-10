@@ -120,6 +120,10 @@ body {
   display: none;
 }
 @media screen and (max-width: 700px) {
+  .fullscreen {
+    position: absolute;
+    height: 15%;
+  }
   .video-container {
     width: 100%;
   }
@@ -136,7 +140,7 @@ body {
   .mobile-controls {
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    /* margin-top: 20%; */
   }
   .nested-controls {
     width: 100%;

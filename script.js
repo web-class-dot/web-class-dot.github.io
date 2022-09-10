@@ -46,6 +46,8 @@ class VideoPlayer {
       document.getElementsByClassName('video-container')[0];
       this.controlsContainer  =  document.querySelector('.controls') ||
       document.getElementsByClassName('controls')[0];
+      this.mobileControls = document.querySelector('.mobile-controls') ||
+      document.getElementsByClassName('mobile-controls')[0];
       
       this.setListener();
   }
@@ -108,9 +110,11 @@ class VideoPlayer {
     console.log(document.fullscreenElement)
     if(!document.fullscreenElement){
       this.Container.requestFullscreen()
-      this.controlsContainer.classList.add("fullscreen")    
+      this.controlsContainer.classList.add("fullscreen")  
+      this.mobileControls.classList.add("fullscreen")  
     }else{
       this.controlsContainer.classList.remove("fullscreen") 
+      this.mobileControls.classList.remove("fullscreen")  
       document.exitFullscreen()
     }
   
