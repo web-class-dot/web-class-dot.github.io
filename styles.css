@@ -118,6 +118,9 @@ body {
 .fullscreen {
   top: 90%;
 }
+.mobile-controls{
+  display: none;
+}
 @media screen and (max-width: 700px) {
   .video-container {
     width: 100%;
@@ -126,9 +129,20 @@ body {
     object-fit: contain;
   }
   .controls{
+    display: none;
     font-size: 1.2rem;
   }
   .loader-animation{
     margin: 0 auto;
+  }
+  .mobile-controls{
+    display: flex;
+    flex-direction: column;
+  }
+  .nested-controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
   }
 }
