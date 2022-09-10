@@ -122,4 +122,7 @@ body {
   .video-container {
     width: 100%;
   }
+  .src-video {
+    object-fit: contain;
+  }
 }
