@@ -125,4 +125,7 @@ body {
   .src-video {
     object-fit: contain;
   }
+  body{
+    font-size: 1.2rem;
+  }
 }
