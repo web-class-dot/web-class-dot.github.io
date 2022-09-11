@@ -60,6 +60,7 @@ body {
   height: 20px;
   background-color: rgb(216, 37, 37);
   border-radius: 150px;
+  z-index: 3;
 }
 .forward,
 .play,
