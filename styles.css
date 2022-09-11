@@ -163,7 +163,7 @@ body {
     height: 40%;
   }
   .seek-slider {
-    height: 3px;
+    height: 5px;
   }
   .seek-slider::-webkit-slider-thumb,
   .seek-slider.seek-slider::-webkit-range-thumb {
