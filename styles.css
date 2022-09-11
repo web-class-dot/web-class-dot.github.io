@@ -161,7 +161,7 @@ body {
     height: 40%;
   }
   .seek-slider{
-    height: 5px;
+    height: 3px;
   }
   .seek-slider::-webkit-slider-thumb,
 .seek-slider.seek-slider::-webkit-range-thumb {
