@@ -144,6 +144,7 @@ body {
     /* margin-top: 20%; */
   }
   .nested-controls {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     font-size: 10px;
@@ -162,4 +163,11 @@ body {
   .seek-slider{
     height: 5px;
   }
+  .seek-slider::-webkit-slider-thumb,
+.seek-slider.seek-slider::-webkit-range-thumb {
+
+  width: 15px;
+  height: 15px;
+  
+}
 }
