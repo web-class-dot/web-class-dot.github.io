@@ -150,7 +150,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    font-size: 10px;
+    font-size: 1.4rem;
   }
   .nested-controls>div{
     font-size: 20px;
