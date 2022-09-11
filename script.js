@@ -6,6 +6,9 @@ class VideoPlayer {
     backwardBtnColour,
   }) {
     // console.log(forwardBtnColour||"error")
+    if(document.body.offsetWidth<700){
+      document.querySelector(".controls").remove()
+    }
     this.playBtnColur = playBtnColur || this.Exception('Expected a string');
     this.pauseBtnColour = pauseBtnColour || this.Exception('Expected a string');
     this.forwardBtnColour =
