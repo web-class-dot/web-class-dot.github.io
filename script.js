@@ -124,6 +124,10 @@ class VideoPlayer {
         this.Container.requestFullscreen();
         this.controlsContainer.classList.add('fullscreen');
         this.mobileControls.classList.add('fullscreen');
+        screen.orientation
+          .lock('landscape')
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err));
       } else {
         this.controlsContainer.classList.remove('fullscreen');
         this.mobileControls.classList.remove('fullscreen');
@@ -136,7 +140,6 @@ class VideoPlayer {
         document.exitFullscreen();
       }
     });
-    screen.orientation.lock('landscape');
   }
   videoSeekUpdate(e) {
     this.seekTrack.value = Math.floor(e.target.currentTime);
