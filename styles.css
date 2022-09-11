@@ -143,34 +143,30 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-   
+
     /* margin-top: 20%; */
   }
   .nested-controls {
     width: 100%;
     display: flex;
     justify-content: space-around;
-  
   }
-  .nested-controls>div{
-    font-size: 1.4rem;
+  .nested-controls > div {
+    font-size: 1.8rem;
   }
   .seek-container {
     width: 100%;
     font-size: 10px;
   }
   .video-container {
-  
     height: 40%;
   }
-  .seek-slider{
+  .seek-slider {
     height: 3px;
   }
   .seek-slider::-webkit-slider-thumb,
-.seek-slider.seek-slider::-webkit-range-thumb {
-
-  width: 15px;
-  height: 15px;
-  
-}
+  .seek-slider.seek-slider::-webkit-range-thumb {
+    width: 15px;
+    height: 15px;
+  }
 }
