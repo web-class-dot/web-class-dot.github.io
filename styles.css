@@ -150,10 +150,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    font-size: 1.4rem;
+  
   }
   .nested-controls>div{
-    font-size: 20px;
+    font-size: 1.4rem;
   }
   .seek-container {
     width: 100%;
