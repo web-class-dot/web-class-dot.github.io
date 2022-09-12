@@ -153,11 +153,11 @@ body {
     justify-content: space-around;
   }
   .nested-controls > div {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .seek-container {
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .video-container {
     width: 100%;
