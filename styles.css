@@ -176,7 +176,9 @@ body {
   .video-container {
     width: 100%;
   }
-
+  .src-video{
+    object-fit: contain;
+  }
   .nested-controls > div {
     font-size: 5rem;
   }
