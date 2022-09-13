@@ -172,3 +172,8 @@ body {
     height: 15px;
   }
 }
+@media screen and (min-width:700px)  and (max-width:1000px){
+  .video-container{
+    width: 100%;
+  }
+}

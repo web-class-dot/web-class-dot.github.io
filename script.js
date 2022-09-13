@@ -74,10 +74,10 @@ class VideoPlayer {
       this.loaderAnimation.style.display = 'block';
     });
     this.videoTag.addEventListener('loadeddata', (e) => {
-      let totalmin = Math.floor(this.videoTag.duration / 60);
+      let totalmin = Math.floor(Math.floor(this.videoTag.duration) / 60);
       let totalsec =
         Math.floor(this.videoTag.duration) -
-        Math.floor(this.videoTag.duration / 60) * 60;
+        Math.floor(Math.floor(this.videoTag.duration) / 60) * 60;
       this.seekTrack.max = Math.floor(this.videoTag.duration);
       this.seekTrack.step = '1';
 
