@@ -177,9 +177,9 @@ body {
     width: 100%;
   }
   .seek-container {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .nested-controls > div {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
