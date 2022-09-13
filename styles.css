@@ -176,4 +176,7 @@ body {
   .video-container{
     width: 100%;
   }
+  .seek-container {
+    font-size: 1.5rem;
+  }
 }
