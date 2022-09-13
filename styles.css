@@ -176,9 +176,7 @@ body {
   .video-container {
     width: 100%;
   }
-  .seek-container {
-    font-size: 2rem;
-  }
+
   .nested-controls > div {
     font-size: 2rem;
   }
