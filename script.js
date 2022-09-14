@@ -73,7 +73,7 @@ class VideoPlayer {
     this.videoTag.addEventListener('loadstart', (e) => {
       this.loaderAnimation.style.display = 'block';
     });
-    this.videoTag.addEventListener('loadeddata', (e) => {
+    this.videoTag.addEventListener('load', (e) => {
       let totalmin = Math.floor(Math.floor(this.videoTag.duration) / 60);
       let totalsec =
         Math.floor(this.videoTag.duration) -
