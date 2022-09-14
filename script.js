@@ -70,7 +70,7 @@ class VideoPlayer {
       'timeupdate',
       this.videoDurationUpdate.bind(this)
     );
-    this.videoTag.addEventListener('loadstart', (e) => {
+    this.videoTag.addEventListener('canplay', (e) => {
       this.loaderAnimation.style.display = 'block';
     });
     this.videoTag.addEventListener('load', (e) => {
