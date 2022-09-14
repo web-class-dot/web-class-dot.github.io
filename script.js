@@ -82,7 +82,9 @@ class VideoPlayer {
       this.seekTrack.max = Math.floor(this.videoTag.duration);
       this.seekTrack.step = '1';
 
-      this.totalDuration.innerText = `00:${
+      this.totalDuration.innerText = `${
+        Math.abs(hours) <= 9 ? '0' + Math.abs(hours) : Math.abs(hours)
+      }:${
         Math.abs(totalmin) <= 9 ? '0' + Math.abs(totalmin) : Math.abs(totalmin)
       }:${
         Math.abs(totalsec) <= 9 ? '0' + Math.abs(totalsec) : Math.abs(totalsec)
