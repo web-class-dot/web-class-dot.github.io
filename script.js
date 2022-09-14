@@ -70,10 +70,10 @@ class VideoPlayer {
       'timeupdate',
       this.videoDurationUpdate.bind(this)
     );
-    this.videoTag.addEventListener('canplay', (e) => {
+    this.videoTag.addEventListener('loadstart', (e) => {
       this.loaderAnimation.style.display = 'block';
     });
-    this.videoTag.addEventListener('load', (e) => {
+    this.videoTag.addEventListener('canplay', (e) => {
       let totalmin = Math.floor(Math.floor(this.videoTag.duration) / 60);
       let totalsec =
         Math.floor(this.videoTag.duration) -
