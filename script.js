@@ -156,7 +156,7 @@ class VideoPlayer {
     let sec =
       Math.floor(this.videoTag.currentTime) -
       Math.floor(this.videoTag.currentTime / 60) * 60;
-    let hours = Math.floor(totalmin / 60);
+    let hours = Math.floor(min / 60);
     this.currentDuration.innerText = `${
       Math.abs(hours) <= 9 ? '0' + Math.abs(hours) : Math.abs(hours)
     }:${Math.abs(min) <= 9 ? '0' + Math.abs(min) : Math.abs(min)}:${
