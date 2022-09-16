@@ -55,7 +55,9 @@ class VideoPlayer {
     this.mobileControls =
       document.querySelector('.mobile-controls') ||
       document.getElementsByClassName('mobile-controls')[0];
-
+    this.rotateBtn =
+      document.querySelector('.rotate') ||
+      document.getElementsByClassName('rotate')[0];
     this.setListener();
   }
   Exception(exp) {
@@ -127,10 +129,6 @@ class VideoPlayer {
         this.Container.requestFullscreen();
         this.controlsContainer.classList.add('fullscreen');
         this.mobileControls.classList.add('fullscreen');
-        screen.orientation
-          .lock('landscape')
-          .then((res) => console.log(res))
-          .catch((err) => console.log(err));
       } else {
         this.controlsContainer.classList.remove('fullscreen');
         this.mobileControls.classList.remove('fullscreen');
@@ -142,6 +140,9 @@ class VideoPlayer {
         this.controlsContainer.classList.remove('fullscreen');
         document.exitFullscreen();
       }
+    });
+    this.rotateBtn.addEventListener('click', (e) => {
+      ScreenOrientation.lock('landscape');
     });
   }
   videoSeekUpdate(e) {
