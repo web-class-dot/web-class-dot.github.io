@@ -142,7 +142,7 @@ class VideoPlayer {
       }
     });
     this.rotateBtn.addEventListener('click', (e) => {
-      ScreenOrientation.lock('landscape');
+      screen.orientation.lock("landscape")
     });
   }
   videoSeekUpdate(e) {

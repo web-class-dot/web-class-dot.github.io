@@ -66,7 +66,7 @@ body {
 .forward,
 .play,
 .pause,
-.mute {
+.mute,.rotate {
   font-size: 2rem;
   font-weight: bolder;
   width: 30px;
