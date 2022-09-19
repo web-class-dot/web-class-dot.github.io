@@ -76,11 +76,10 @@ class VideoPlayer {
       this.loaderAnimation.style.display = 'block';
     });
     this.videoTag.addEventListener('canplay', (e) => {
-      let totalmin = Math.floor(Math.floor(this.videoTag.duration) / 60);
-      let totalsec =
-        Math.floor(this.videoTag.duration) -
-        Math.floor(Math.floor(this.videoTag.duration) / 60) * 60;
-      let hours = Math.floor(totalmin / 60);
+      let totalsec = Math.floor(Math.floor(this.videoTag.currentTime) % 60);
+      let totalmin = Math.floor(this.videoTag.currentTime / 60) % 60;
+      console.log(totalmin);
+      let hours = Math.floor(this.videoTag.currentTime / 3600);
       this.seekTrack.max = Math.floor(this.videoTag.duration);
       this.seekTrack.step = '1';
 
@@ -142,7 +141,7 @@ class VideoPlayer {
       }
     });
     this.rotateBtn.addEventListener('click', (e) => {
-      screen.orientation.lock("landscape")
+      screen.orientation.lock('landscape');
     });
   }
   videoSeekUpdate(e) {
@@ -155,11 +154,10 @@ class VideoPlayer {
     }%)`;
   }
   videoDurationUpdate(e) {
-    let min = Math.floor(this.videoTag.currentTime / 60);
-    let sec =
-      Math.floor(this.videoTag.currentTime) -
-      Math.floor(this.videoTag.currentTime / 60) * 60;
-    let hours = Math.floor(min / 60);
+    let totalsec = Math.floor(Math.floor(this.videoTag.currentTime) % 60);
+    let totalmin = Math.floor(this.videoTag.currentTime / 60) % 60;
+
+    let hours = Math.floor(this.videoTag.currentTime / 3600);
     this.currentDuration.innerText = `${
       Math.abs(hours) <= 9 ? '0' + Math.abs(hours) : Math.abs(hours)
     }:${Math.abs(min) <= 9 ? '0' + Math.abs(min) : Math.abs(min)}:${
