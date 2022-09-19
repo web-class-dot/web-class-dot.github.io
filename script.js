@@ -1,23 +1,25 @@
 class VideoPlayer {
   constructor({
-    playBtnColur,
-    pauseBtnColour,
-    forwardBtnColour,
-    backwardBtnColour,
+    miniPlayerScale,
+    fullscreenPlayerScale
   }) {
     // console.log(forwardBtnColour||"error")
     if (document.body.offsetWidth < 700) {
       document.querySelector('.controls').remove();
     }
-    this.playBtnColur = playBtnColur || this.Exception('Expected a string');
-    this.pauseBtnColour = pauseBtnColour || this.Exception('Expected a string');
-    this.forwardBtnColour =
-      forwardBtnColour || this.Exception('Expected a string');
-    this.backwardBtnColour =
-      backwardBtnColour || this.Exception('Expected a string');
+    // this.playBtnColur = playBtnColur || this.Exception('Expected a string');
+    // this.pauseBtnColour = pauseBtnColour || this.Exception('Expected a string');
+    // this.forwardBtnColour =
+    //   forwardBtnColour || this.Exception('Expected a string');
+    // this.backwardBtnColour =
+    //   backwardBtnColour || this.Exception('Expected a string');
+    
     this.videoTag =
       document.querySelector('.src-video') ||
       document.getElementsByClassName('src-video')[0];
+      this.videoTag.style.objectFit=miniPlayerScale
+      this.miniPlayerScale = miniPlayerScale
+      this.fullscreenPlayerScale = fullscreenPlayerScale
     this.seekTrack =
       document.querySelector('.seek-slider') ||
       document.getElementsByClassName('seek-slider')[0];
@@ -101,13 +103,13 @@ class VideoPlayer {
       this.videoTag.pause();
     });
     this.seekTrack.addEventListener('input', (e) => {
-      this.videoTag.currentTime = e.target.value;
       this.seekTrack.style.backgroundImage = `linear-gradient(to left,rgb(84 80 80) 0% ${Math.abs(
         (parseInt(this.seekTrack.value) / parseInt(this.seekTrack.max)) * 100 -
           100
       )}%,rgba(172, 19, 19, 0.685) 0% ${
         (parseInt(this.seekTrack.value) / parseInt(this.seekTrack.max)) * 100
       }%)`;
+      this.videoTag.currentTime = e.target.value;
     });
     this.forward.addEventListener('click', (e) => {
       this.videoTag.currentTime = this.videoTag.currentTime + 10;
@@ -128,16 +130,19 @@ class VideoPlayer {
         this.Container.requestFullscreen();
         this.controlsContainer.classList.add('fullscreen');
         this.mobileControls.classList.add('fullscreen');
+        this.videoTag.style.objectFit = this.fullscreenPlayerScale
       } else {
         this.controlsContainer.classList.remove('fullscreen');
         this.mobileControls.classList.remove('fullscreen');
         document.exitFullscreen();
+        this.videoTag.style.objectFit = this.miniPlayerScale
       }
     });
     document.addEventListener('fullscreenchange', (e) => {
       if (document.fullscreenElement == null) {
         this.controlsContainer.classList.remove('fullscreen');
         document.exitFullscreen();
+        this.videoTag.style.objectFit = this.miniPlayerScale
       }
     });
     this.rotateBtn.addEventListener('click', (e) => {
@@ -160,14 +165,11 @@ class VideoPlayer {
     let hours = Math.floor(this.videoTag.currentTime / 3600);
     this.currentDuration.innerText = `${
       Math.abs(hours) <= 9 ? '0' + Math.abs(hours) : Math.abs(hours)
-    }:${Math.abs(totalmin) <= 9 ? '0' + Math.abs(totalmin) : Math.abs(totalmin)}:${
+    }:${
+      Math.abs(totalmin) <= 9 ? '0' + Math.abs(totalmin) : Math.abs(totalmin)
+    }:${
       Math.abs(totalsec) <= 9 ? '0' + Math.abs(totalsec) : Math.abs(totalsec)
     }`;
   }
 }
-let player = new VideoPlayer({
-  playBtnColur: 'red',
-  pauseBtnColour: 'red',
-  forwardBtnColour: 'red',
-  backwardBtnColour: 'red',
-});
+let player = new VideoPlayer({miniPlayerScale:"contain",fullscreenPlayerScale:"cover"});
