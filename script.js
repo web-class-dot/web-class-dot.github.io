@@ -76,10 +76,10 @@ class VideoPlayer {
       this.loaderAnimation.style.display = 'block';
     });
     this.videoTag.addEventListener('canplay', (e) => {
-      let totalsec = Math.floor(Math.floor(this.videoTag.currentTime) % 60);
-      let totalmin = Math.floor(this.videoTag.currentTime / 60) % 60;
+      let totalsec = Math.floor(Math.floor(this.videoTag.duration) % 60);
+      let totalmin = Math.floor(this.videoTag.duration / 60) % 60;
       console.log(totalmin);
-      let hours = Math.floor(this.videoTag.currentTime / 3600);
+      let hours = Math.floor(this.videoTag.duration / 3600);
       this.seekTrack.max = Math.floor(this.videoTag.duration);
       this.seekTrack.step = '1';
 
@@ -160,8 +160,8 @@ class VideoPlayer {
     let hours = Math.floor(this.videoTag.currentTime / 3600);
     this.currentDuration.innerText = `${
       Math.abs(hours) <= 9 ? '0' + Math.abs(hours) : Math.abs(hours)
-    }:${Math.abs(min) <= 9 ? '0' + Math.abs(min) : Math.abs(min)}:${
-      Math.abs(sec) <= 9 ? '0' + Math.abs(sec) : Math.abs(sec)
+    }:${Math.abs(totalmin) <= 9 ? '0' + Math.abs(totalmin) : Math.abs(totalmin)}:${
+      Math.abs(totalsec) <= 9 ? '0' + Math.abs(totalsec) : Math.abs(totalsec)
     }`;
   }
 }
